@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Json WorkShop</title>
+    <style>
+    body {
+        background-color: rgb(225, 225, 225);
+    }
+    .panel-footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 24px;
+    padding: 15px 0;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    background-color: rgb(225, 225, 225);
+    }
+    .console {
+        background-color: black;
+        color: greenyellow;
+        font-size: 24px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+</style>
+  </head>
+  <body>
+      <div class="container">
+          <div class="row mt-3">
+              <div class="col-12 text-center">
+                  <h1>Json Crud</h1>
+                    <hr>
+                    <h3>So .... How many programming languages do you know and for how long ? </h3>
+                    <hr>
+                </div>
+          </div>
+          <div class="row mb-5 mt-5 console">
+              <div class="container">
+                  <div class="row">
+                      <div id="Json" class="col-12">
+        
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <div class="container mt-5">
+                <hr>
+                <div class="row text-center">
+        
+                        <div class="col-4 ">
+                                        <div class=" mb-3">
+                                            <!-- <span class="input-group-text" id="basic-addon1">Delete the DIV :</span> -->
+                                            <button onclick="createKeyValue()" type="button" class="btn btn-outline-primary mt-2">Create</button>
+                                            <input id="createKey" type="text" class="form-control mt-4" placeholder="enter the object" aria-label="deleteDiv" aria-describedby="basic-addon1">
+                                            <input id="createValue" type="number" class="form-control mt-4 mb-3" placeholder="enter the time" aria-label="deleteDiv" aria-describedby="basic-addon1">
+                                        Enter please the name of the new object and the number of years
+                                        </div>
+                                        <!-- <input id="createObject" type="text" class="form-control mt-2" placeholder="enter the object" aria-label="deleteDiv" aria-describedby="basic-addon1"> -->
+
+                                        <!-- <input id="createPosition" type="number" class="form-control mt-2" placeholder="enter the position" aria-label="deleteDiv" aria-describedby="basic-addon1"> -->
+
+                        </div>
+                        <div class="col-4 ">
+                                <div class=" mb-3">
+                                  <!-- <span class="input-group-text" id="basic-addon1">Delete the DIV :</span> -->
+                                  <button onclick="modifyKeyValue()" type="button" class="btn btn-outline-success mt-2">Modify</button>
+
+                                </div>
+                                
+                            <input id="position" type="text" class="form-control mt-4" placeholder="enter the object" aria-label="deleteDiv" aria-describedby="basic-addon1">
+                            <!-- <input id="key" type="text" class="form-control mt-2" placeholder="enter the key" aria-label="deleteDiv" aria-describedby="basic-addon1"> -->
+                            <input id="value" type="number" class="form-control mt-4 mb-3" placeholder="enter the time" aria-label="deleteDiv" aria-describedby="basic-addon1">
+                            Enter please the name of the object to change and the number of years
+
+                        </div>
+                        <div class="col-4">
+                                <div class="mb-3">
+                                  <!-- <span class="input-group-text" id="basic-addon1">Delete the DIV :</span> -->
+                                  <button onclick="deleteKeyValue()" type="button" class="btn btn-outline-danger mt-5">Delete</button>
+
+                                  <input id="deleteObject" type="text" class="form-control mt-4 mb-3" placeholder="enter the object" aria-label="deleteDiv" aria-describedby="basic-addon1">
+                                  Enter please the name of the object to delete
+
+                                </div>
+                                
+                            <!-- <input id="deleteKey" type="text" class="form-control mt-2" placeholder="enter the key" aria-label="deleteDiv" aria-describedby="basic-addon1"> -->
+                        </div>
+
+                </div>
+            </div>
+            <div id="myModal"class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Ooops</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Are you really lying to me ? ......</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                     
+                    <span class="made-with-heart">
+                        Done With     <svg class="octicon octicon-heart" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9 2c-.97 0-1.69.42-2.2 1-.51.58-.78.92-.8 1-.02-.08-.28-.42-.8-1-.52-.58-1.17-1-2.2-1-1.632.086-2.954 1.333-3 3 0 .52.09 1.52.67 2.67C1.25 8.82 3.01 10.61 6 13c2.98-2.39 4.77-4.17 5.34-5.33C11.91 6.51 12 5.5 12 5c-.047-1.69-1.342-2.913-3-3z"></path></svg> by AlejoCode
+                      </span>
+              </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        let FrameWorks = {}
+        let element = document.getElementById("Json");
+        element.innerHTML = JSON.stringify(FrameWorks);
+        function deleteKeyValue() {
+            
+            let position = document.getElementById("deleteObject").value;
+            // let key = document.getElementById("deleteKey").value;
+            console.log("position : "+ position);
+            // console.log("key : "+ key);
+            console.log("FrameWorks : "+ JSON.stringify(FrameWorks));
+
+            let flag = delete FrameWorks[position.toString()]
+            console.log("flag : " + flag)
+            console.log("FrameWorks : "+ JSON.stringify(FrameWorks));
+
+            element.innerHTML = "";
+            element.innerHTML = JSON.stringify(FrameWorks);
+
+            // while (father.firstChild) {
+            //     father.removeChild(father.firstChild);
+            // }
+
+        }
+        function createKeyValue() {
+            // let object = document.getElementById("createObject").value;
+
+            // let position = document.getElementById("createPosition").value;
+            let key = document.getElementById("createKey").value;
+            let value = document.getElementById("createValue").value;
+
+            // console.log("object : "+ object);
+
+            // console.log("position : "+ position);
+            console.log("key : "+ key);
+            console.log("value : "+ value);
+
+            console.log("FrameWorks : "+ JSON.stringify(FrameWorks));
+
+            let flag = FrameWorks[key] = value;
+
+            //JsonDevTools.object.push({key : value});
+
+            console.log("flag : " + flag);
+            console.log("FrameWorks : "+ JSON.stringify(FrameWorks));
+
+            element.innerHTML = "";
+            element.innerHTML = JSON.stringify(FrameWorks);
+
+            // while (father.firstChild) {
+            //     father.removeChild(father.firstChild);
+            // }
+
+        }
+
+        function modifyKeyValue() {
+            // alert("Really lying to me ....");
+                let position = document.getElementById("position").value;
+                
+                // let key = document.getElementById("key").value;
+                if(position != "" && value != "") {
+                let value = document.getElementById("value").value;
+                $('#myModal').modal('show');
+                console.log("FrameWorks : "+ JSON.stringify(FrameWorks));
+                console.log("FrameWorks.position : "+ JSON.stringify(FrameWorks[position.toString()]));
+
+                console.log("position : "+ position);
+                // console.log("key : "+ key);
+                console.log("value : "+ value);
+                FrameWorks[position.toString()] = value;
+                console.log("FrameWorks.position : "+ JSON.stringify(FrameWorks[position.toString()]));
+
+                element.innerHTML = "";
+                element.innerHTML = JSON.stringify(FrameWorks);
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- 
+boton q agrege un nuevo clave valor
+boton q modifique un valor
+boton que elimine un dato  -->
